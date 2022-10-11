@@ -15,7 +15,7 @@ class BaseModel:
     def save(self):
         """save func"""
         self.updated_at = datetime.now()
-    def to_dict(self):
+    def to_dict(self, name):
         """to_dict func"""
         dic = self.__dict__
         dic["__class__"] = str(self.name)
