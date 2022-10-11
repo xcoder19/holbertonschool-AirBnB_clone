@@ -10,7 +10,8 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def __str__(self):
-        print ("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
+        var = (f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}")
+        print (str(var))
     def save(self):
         """save func"""
         self.updated_at = datetime.now()
