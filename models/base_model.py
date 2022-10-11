@@ -4,14 +4,14 @@ import datetime
 class BaseModel:
     """BaseModel Class"""
     id = str(uuid.uuid4())
-    created_at = datetime.datetime()
-    updated_at = datetime.datetime()
+    created_at = datetime.now()
+    updated_at = datetime.now()
 
     def __str__(self):
         print(f"[{self.name}] ({self.id}) {self.__dict__}")
     def save(self):
         """save func"""
-        self.updated_at = datetime.datetime()
+        self.updated_at = datetime.now()
     def to_dict(self):
         """to_dict func"""
         dic = self.__dict__
