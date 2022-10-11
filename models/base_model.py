@@ -8,11 +8,11 @@ class BaseModel:
     updated_at = datetime.now()
 
 
-    def __init__(self, name):
+    def __init__(self):
         id = str(uuid.uuid4())
         created_at = datetime.now()
         updated_at = datetime.now()
-        
+
     def __str__(self):
         print(f"[{self.name}] ({self.id}) {self.__dict__}")
     def save(self):
