@@ -3,13 +3,13 @@ from datetime import datetime
 """BaseModel Class"""
 class BaseModel:
     """BaseModel Class"""
-    id = str(uuid.uuid4())
+    id = uuid.uuid4()
     created_at = datetime.now()
     updated_at = datetime.now()
 
 
     def __init__(self):
-        id = str(uuid.uuid4())
+        id = uuid.uuid4()
         created_at = datetime.now()
         updated_at = datetime.now()
 
