@@ -15,10 +15,10 @@ class BaseModel:
     def save(self):
         """save func"""
         self.updated_at = datetime.now()
-    def to_dict(self, name):
+    def to_dict(self):
         """to_dict func"""
         dic = self.__dict__
-        dic["__class__"] = str(self.name)
+        dic["__class__"] = str(self.__class__.__name__)
         dic["created_at"] =  self.created_at.isoformat()
         dic["updated_at"] =  self.updated_at.isoformat() 
         return dic
