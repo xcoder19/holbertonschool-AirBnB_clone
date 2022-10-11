@@ -11,7 +11,7 @@ class BaseModel:
 
     def __str__(self):
         var = (f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}")
-        print (str(var))
+        return (str(var))
     def save(self):
         """save func"""
         self.updated_at = datetime.now()
