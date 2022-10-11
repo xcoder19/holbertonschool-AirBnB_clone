@@ -8,7 +8,7 @@ class BaseModel:
         self.id = str(uuid.uuid4)
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-        if (kwargs):
+        if kwargs:
              
             for key, value in kwargs.items():
                 if key == "id":
@@ -16,7 +16,7 @@ class BaseModel:
                 elif key == "created_at":
                     self.created_at = datetime.isoformat()
                 elif key == "updated_at":
-                        self.updated_at =  datetime.isoformat()
+                    self.updated_at =  datetime.isoformat()
         else:
             self.id = str(uuid.uuid4)
             self.created_at = datetime.now()
