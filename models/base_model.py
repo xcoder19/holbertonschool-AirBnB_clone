@@ -1,5 +1,5 @@
 import uuid
-import datetime
+from datetime import datetime
 """BaseModel Class"""
 class BaseModel:
     """BaseModel Class"""
