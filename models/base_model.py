@@ -11,9 +11,9 @@ class BaseModel:
                 if key == "id":
                     self.id = str(value)
                 elif key == "created_at":
-                    self.created_at = datetime.isoformat()
+                    self.created_at = datetime.now().isoformat()
                 elif key == "updated_at":
-                    self.updated_at =  datetime.isoformat()
+                    self.updated_at =  datetime.now().isoformat()
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
