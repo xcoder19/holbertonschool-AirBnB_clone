@@ -1,5 +1,11 @@
 import cmd
+"""HBNBCommand class"""
+
+
+
 class HBNBCommand(cmd.Cmd):
+    """HBNBCommand class"""
+
     prompt = '(hbnb) '
     def do_quit(self, arg):
         self.close()
