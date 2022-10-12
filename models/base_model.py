@@ -16,6 +16,7 @@ class BaseModel:
                 elif key == "updated_at":
                     self.updated_at =  datetime.now().isoformat()
         else:
+            
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
@@ -27,7 +28,7 @@ class BaseModel:
     def save(self):
         """save func"""
         self.updated_at = datetime.now()
-        storage.save(self)
+        storage.save()
     def to_dict(self):
         """to_dict func"""
         dic = self.__dict__
