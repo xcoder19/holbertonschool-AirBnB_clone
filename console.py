@@ -17,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
         
 
     def do_EOF(self, arg):
-        pass
+        quit()
         
 
 
