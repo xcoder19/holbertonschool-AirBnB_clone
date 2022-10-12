@@ -20,4 +20,4 @@ class FileStorage():
         file_exists = exists(self.__file_path)
         if file_exists is True:
             with open(self.__file_path,"r") as file:
-                self.__objects = json.loads(file)
+                self.__objects = json.load(file)
