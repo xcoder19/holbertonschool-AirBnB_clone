@@ -2,7 +2,7 @@
 import json
 from os.path import exists
 class FileStorage():
-    __file_path = ""
+    __file_path = "file.json"
     __objects = {}
 
     def all(self):
@@ -18,6 +18,6 @@ class FileStorage():
 
     def reload(self):
         file_exists = exists(self.__file_path)
-        if file_exists:
+        if file_exists is True:
             with open(self.__file_path,"r") as file:
                 self.__objects = json.loads(file)
