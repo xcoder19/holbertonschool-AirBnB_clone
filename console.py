@@ -24,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self,arg):
 
-        args = arg.split('')
+        args = arg.split(" ")
         if len(arg) == 0:
             print("** class name missing **")
             return
@@ -82,7 +82,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, arg):
-        
+
         list = []
         args = arg.split(" ")
         if args[0] != "BaseModel":
