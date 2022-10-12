@@ -9,7 +9,7 @@ class FileStorage():
         return self.__objects
 
     def new(self, obj):
-        self.__objects[f"{self.__class__.__name__}.{self.id}"] = obj
+        self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
         json_object = json.dumps(self.__objects)
