@@ -12,12 +12,9 @@ class FileStorage():
         self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
-        json_object = json.dumps(self.__objects)
         with open(self.__file_path, "w") as file:
-            file.write(json_object)
+            json.dump(self.__objects, file)
 
     def reload(self):
-        file_exists = exists(self.__file_path)
-        if file_exists is True:
-            with open(self.__file_path,"r") as file:
-                self.__objects = json.load(file)
+        with open(self.__file_path, "r") as file:
+            obj = json.load(file)
