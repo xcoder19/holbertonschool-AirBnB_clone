@@ -12,6 +12,13 @@ class HBNBCommand(cmd.Cmd):
     """HBNBCommand class"""
 
     prompt = '(hbnb) '
+    types = ["BaseModel",
+               "User",
+               "State",
+               "City",
+               "Amenity",
+               "Place",
+               "Review"]
 
     def do_quit(self):
         quit()
@@ -28,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != "BaseModel":
+        if args[0] not in  self.types:
             print("** class doesn't exist **")
             return
         obj = eval(f"{args[0]}()")
@@ -41,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != "BaseModel":
+        if args[0] not in  self.types:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -65,7 +72,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != "BaseModel":
+        if args[0] not in  self.types:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
@@ -86,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
 
         list = []
         args = arg.split(" ")
-        if args[0] != "BaseModel":
+        if args[0] not in  self.types:
             print("** class doesn't exist **")
             return
 
@@ -103,7 +110,7 @@ class HBNBCommand(cmd.Cmd):
         if len(arg) == 0:
             print("** class name missing **")
             return
-        if args[0] != "BaseModel":
+        if args[0] not in  self.types:
             print("** class doesn't exist **")
             return
         if len(args) == 1:
