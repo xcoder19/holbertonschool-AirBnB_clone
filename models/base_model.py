@@ -6,11 +6,12 @@ from datetime import datetime
 import models
 import json
 
+
 class BaseModel():
     """BaseModel class"""
 
     def __init__(self, *args, **kwargs):
-       
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == "id":
