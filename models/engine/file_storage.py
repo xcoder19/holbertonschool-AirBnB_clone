@@ -2,6 +2,8 @@
 
 """ FileStorage class"""
 from models.base_model import BaseModel
+import models
+import os
 
 
 import json
@@ -20,13 +22,15 @@ class FileStorage:
 
     def save(self):
         dict = {}
-        for x , v in self.__objects.items():
-            dict[x] = v
+        try:
+            for x , v in self.__objects.items():
+                dict[x] = v.to_dict()
         
-        json_data = json.dumps(dict)
-        with open(self.__file_path, "w") as file:
-            file.write(json_data)
-        
+            json_data = json.dumps(dict)
+            with open(self.__file_path, "w") as file:
+                file.write(json_data)
+        except:
+            pass
 
     def reload(self):
         try:
