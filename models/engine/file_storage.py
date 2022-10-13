@@ -23,13 +23,13 @@ class FileStorage:
     def save(self):
         dict = {}
         try:
-            for x , v in self.__objects.items():
+            for x, v in self.__objects.items():
                 dict[x] = v.to_dict()
-        
+
             json_data = json.dumps(dict)
             with open(self.__file_path, "w") as file:
                 file.write(json_data)
-        except:
+        except BaseException:
             pass
 
     def reload(self):
