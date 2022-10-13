@@ -5,7 +5,7 @@ uinitest for the city
 
 import unittest
 
-from models import city
+from models.city import City
 
 """ class Test_State"""
 class Test_State(unittest.TestCase):
@@ -13,7 +13,7 @@ class Test_State(unittest.TestCase):
 
      
     def test(self):
-        self.assertEqual(str, type(city.name))
+        self.assertEqual(str, type(City.name))
 
     def test2(self):
-        self.assertEqual(str, type(city.state_id))
+        self.assertEqual(str, type(City.state_id))
