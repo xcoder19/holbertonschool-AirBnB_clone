@@ -25,4 +25,10 @@ class Test_BaseModel(unittest.TestCase):
         obj1 = BaseModel()
         obj2 = BaseModel()
         self.assertNotEqual(obj1.__str__(), obj2.__str__())
+
+    def test4(self):
+        
+        obj1 = BaseModel()
+        obj2 = BaseModel()
+        self.assertNotEqual(obj1.save(), obj2.save())
  
