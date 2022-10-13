@@ -5,7 +5,7 @@ uinitest for the amenity
 
 import unittest
 
-from models import amenity
+from models.amenity import Amenity
 
 """ class Test_amenity"""
 class Test_amenity(unittest.TestCase):
@@ -13,5 +13,5 @@ class Test_amenity(unittest.TestCase):
 
      
     def test(self):
-        self.assertEqual(str, type(amenity.name))
+        self.assertEqual(str, type(Amenity.name))
 
