@@ -20,11 +20,8 @@ class FileStorage:
 
     def save(self):
 
-        dic = {}
-        for key, value in self.__objects.items():
-            dic[key] = value.__dict__
         with open(self.__file_path, "w") as file:
-            json.dump(dic, file)
+            json.dump(self.__objects, file)
 
     def reload(self):
         try:
