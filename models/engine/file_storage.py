@@ -19,10 +19,13 @@ class FileStorage:
         self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
-        for x in self.__objects:
-            json_data = json.dumps(x) 
-            with open(self.__file_path, "a") as file:
-                file.write(json_data)
+        dict = {}
+        for x , v in self.__objects.items():
+            dict[x] = v
+        
+        json_data = json.dumps(dict)
+        with open(self.__file_path, "w") as file:
+            file.write(json_data)
         
 
     def reload(self):
