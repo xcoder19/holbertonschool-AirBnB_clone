@@ -8,10 +8,11 @@ import unittest
 from models.city import City
 
 """ class Test_State"""
+
+
 class Test_State(unittest.TestCase):
     """ class Test_State"""
 
-     
     def test(self):
         self.assertEqual(str, type(City.name))
 

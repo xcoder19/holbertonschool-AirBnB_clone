@@ -8,10 +8,11 @@ import unittest
 from models.review import Review
 
 """ class Test_State"""
+
+
 class Test_State(unittest.TestCase):
     """ class Test_State"""
 
-     
     def test(self):
         self.assertEqual(str, type(Review.place_id))
 

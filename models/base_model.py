@@ -9,9 +9,8 @@ import models
 class BaseModel():
     """BaseModel class"""
 
-
     def __init__(self, *args, **kwargs):
-        
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == "id":
@@ -29,19 +28,16 @@ class BaseModel():
             models.storage.new(self)
 
     def __str__(self):
-       
+
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-            
 
     def save(self):
-        
+
         self.updated_at = datetime.now()
         models.storage.save()
 
-   
-
     def to_dict(self):
-        
+
         dic = self.__dict__
         dic["created_at"] = self.created_at.isoformat()
         dic["updated_at"] = self.updated_at.isoformat()
