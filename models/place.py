@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ class Place"""
-class Place:
+from models.base_model import BaseModel
+
+
+class Place(BaseModel):
     """ class Place"""
     city_id = ""
     user_id = ""
