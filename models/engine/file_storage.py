@@ -19,7 +19,8 @@ class FileStorage:
         self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
-        json_data = json.dumps(self.__objects)
+        obj = self.__objects.copy()
+        json_data = json.dumps(obj)
         with open(self.__file_path, "w") as file:
             file.write(json_data)
 
