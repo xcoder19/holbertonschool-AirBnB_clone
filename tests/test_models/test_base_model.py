@@ -32,3 +32,8 @@ class Test_BaseModel(unittest.TestCase):
         obj2 = BaseModel()
         self.assertNotEqual(obj1.save(), obj2.save())
  
+    def test4(self):
+        obj1 = BaseModel()
+        obj2 = BaseModel()
+        self.assertNotEqual(obj1.created_at, obj2.created_at)
+ 
