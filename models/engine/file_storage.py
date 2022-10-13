@@ -18,11 +18,12 @@ class FileStorage:
         self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
     
     def save(self):
-        new_dict = {}
+        
+        dic = {}
         for key, value in self.__objects.items():
-            new_dict[key] = value.to_dict()
+            dic[key] = BaseModel.to_dict(value)
         with open(self.__file_path, "w") as file:
-            json.dump(new_dict, file)
+            json.dump(dic, file)
    
     def reload(self):
         try:
@@ -32,4 +33,4 @@ class FileStorage:
                 
         except BaseException:
             pass
-    
+      
