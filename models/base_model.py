@@ -38,8 +38,8 @@ class BaseModel():
 
     def to_dict(self):
 
-        dic = self.__dict__
-        dic["created_at"] = self.created_at.isoformat()
-        dic["updated_at"] = self.updated_at.isoformat()
-        dic["__class__"] = self.__class__.__name__
-        return dic
+        newdic = self.__dict__.copy()
+        newdic["created_at"] = self.created_at.isoformat()
+        newdic["updated_at"] = self.updated_at.isoformat()
+        newdic["__class__"] = self.__class__.__name__
+        return newdic
