@@ -70,7 +70,7 @@ class HBNBCommand(cmd.Cmd):
                 flag = True
                 print(value)
                 return
-               
+
         if flag is False:
             print("** no instance found **")
 
