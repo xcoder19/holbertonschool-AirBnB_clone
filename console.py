@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
              "Place",
              "Review"]
 
-    def do_quit(self):
+    def do_quit(self, arg):
         quit()
 
     def do_EOF(self):
