@@ -110,6 +110,10 @@ class HBNBCommand(cmd.Cmd):
                 list.append(value.__str__())
                 print(list)
                 return
+            elif len(arg) == 0:
+                list.append(value.__str__())
+                print(list)
+
             print("** no instance found **")
 
     def do_update(self, arg):
