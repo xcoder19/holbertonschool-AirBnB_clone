@@ -63,10 +63,11 @@ class HBNBCommand(cmd.Cmd):
 
         objs = storage.all()
         id = f"{args[0]}.{args[1]}"
-
+        flag = False
         for key, value in objs.items():
 
             if objs == key:
+                flag = True
                 print(value)
                 return
 
@@ -140,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
                 setattr(objs[obj], args[2], args[3])
                 return
-        if flag:
+        if flag is False:
             print("** no instance found **")
 
 
