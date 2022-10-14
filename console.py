@@ -66,7 +66,7 @@ class HBNBCommand(cmd.Cmd):
         flag = False
         for key, value in objs.items():
 
-            if objs == key:
+            if objs[id] == key:
                 flag = True
                 print(value)
                 return
