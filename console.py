@@ -70,7 +70,7 @@ class HBNBCommand(cmd.Cmd):
                 print(value)
                 return
 
-            print("** no instance found **")
+        print("** no instance found **")
 
     def do_destroy(self, arg):
 
