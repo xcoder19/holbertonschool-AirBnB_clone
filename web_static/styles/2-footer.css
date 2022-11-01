@@ -1,0 +1,9 @@
+footer {
+text-align: center;
+display: grid;
+justify-content: center; /* center horizontaly */
+align-content: center; /* center vertically */
+background-color: #00ff00;
+height: 60px;
+width: 100%;
+}
